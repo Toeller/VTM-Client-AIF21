@@ -15,6 +15,7 @@ namespace VTM_Client_AIF21
         public Form1()
         {
             InitializeComponent();
+            //Hello
         }
     }
 }
