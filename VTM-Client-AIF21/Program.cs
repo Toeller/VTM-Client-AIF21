@@ -8,10 +8,11 @@ namespace VTM_Client_AIF21
 {
     internal static class Program
     {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
-        [STAThread]
+		/// <summary>
+		/// Der Haupteinstiegspunkt für die Anwendung.
+		/// </summary>
+		private static IView view;
+		[STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
