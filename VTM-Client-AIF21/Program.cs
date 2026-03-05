@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
 
 namespace VTM_Client_AIF21
@@ -9,14 +6,20 @@ namespace VTM_Client_AIF21
     internal static class Program
     {
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// Haupteinstiegspunkt der Anwendung (MVC-Start).
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // MVC initialisieren
+            Model model = new Model();
+            Form1 view = new Form1();
+            Controller controller = new Controller(model, view);
+
+            Application.Run(view);
         }
     }
 }
