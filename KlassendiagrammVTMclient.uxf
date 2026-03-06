@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>153</y>
+      <w>189</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Anlage
+--
+- reaktor
+- Leitung
+- ventile 
+- sensoren
+- pumpe: Pumpe
++ steurerung: Steuerung
+--
++starten(An)
++stoppen(Aus)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>324</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Reaktor
+--
+- volumen: string
+- temperatur: string
+- fuellstand: string 
+--
++ heizen
++ kuehlen
++ rühren</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>873</x>
+      <y>324</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Steuerung
+--
+sollTemperatur : string
+--
++ regeln
++ Alarm(Licht)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>423</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Leitung
+--
+- länge
+--
++ transportmedium</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>477</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Sensor
+--
+- name
+- wert
+--
++ messen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>612</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Ventil
+--
+- istOffen: boolean
+--
++ öffnen
++ schliessen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>873</x>
+      <y>486</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Pumpe
+--
+istOffen: boolean
+--
++ starten
++ stoppen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>873</x>
+      <y>612</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>AnzeigeElement
+--
+- sollTemperatur : String
+--
++ Regeln()
++ ventilSchalten()
++ alarmAuslöser()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>207</y>
+      <w>153</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>207</y>
+      <w>135</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;130.0;130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>639</x>
+      <y>342</y>
+      <w>108</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;90.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>783</x>
+      <y>360</y>
+      <w>108</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;Steuert&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>432</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;Steuert&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>441</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;misst&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>549</y>
+      <w>126</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;misst&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;90.0;20.0;90.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>450</y>
+      <w>81</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;40.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>558</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;Steuert&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
