@@ -53,6 +53,9 @@ namespace VTM_Client_AIF21
             //}
             //}
             //client.Shutdown(SocketShutdown.Both);
+
+        private IView view;
+        private IController controller;
         }
 
 
